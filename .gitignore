@@ -2,6 +2,15 @@
 data/raw/
 data/curated/
 
+# ignore downloaded data as it is automated through R
+# given cannot automate file from wheeloratings, cannot just add entire landing folder to gitignore
+data/landing/coaches_votes_12-22.csv
+data/landing/match_results_23.csv
+data/landing/player_stats_12-22_fry.csv
+data/landing/player_stats_12-22_fw.csv
+data/landing/player_stats_22_tables.csv
+data/landing/player_stats_23_afl.csv
+
 # OSX .DS_Store file
 .DS_Store
 
@@ -11,3 +20,4 @@ data/curated/
 # R file
 .RData
 .Rhistory
+
