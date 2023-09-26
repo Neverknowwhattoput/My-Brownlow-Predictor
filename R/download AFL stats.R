@@ -1,4 +1,4 @@
-install.packages('fitzRoy')
+# install.packages('fitzRoy')
 
 library(fitzRoy)
 
@@ -23,7 +23,7 @@ stats_fw <- fetch_player_stats(season = 2012:2022,
                                                comp = "AFLM", 
                                                source = "footywire")
 
-write.csv(stats_fw, '../data/landing/player_stats_12-22_fry.csv')
+write.csv(stats_fw, '../data/landing/player_stats_12-22_fw.csv')
 
 # since the fryzigg source does not currently contain brownlow votes for 2022,
 # they are sourced from the footytables website
@@ -31,3 +31,4 @@ stats2022_tables <- fetch_player_stats(season=2022, comp="AFLM", source="afltabl
 write.csv(stats2022_tables, '../data/landing/player_stats_22_tables.csv')
 
 coaches_votes <- fetch_coaches_votes(season=2012:2022)
+write.csv(coaches_votes, '../data/landing/coaches_votes_12-22.csv')
