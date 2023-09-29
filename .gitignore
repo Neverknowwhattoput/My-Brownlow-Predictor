@@ -21,3 +21,5 @@ data/landing/player_stats_23_afl.csv
 .RData
 .Rhistory
 
+data/landing/is_player_captain_12-22.csv
+data/landing/is_player_captain_23.csv
