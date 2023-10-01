@@ -1,7 +1,7 @@
 # My Brownlow Predictor
  Personal project to apply what I have learnt in uni to a task of interest
 
-Table of Predictions when testing the model on the 2022 season
+# Table of Predictions when testing the model on the 2022 season
 
 <table border="1" class="dataframe">
   <thead>
@@ -87,6 +87,6 @@ Table of Predictions when testing the model on the 2022 season
   </tbody>
 </table>
 
-Top 5 predictions for 2023
+# Top 5 predictions for 2023
 
 ![Sample Image](https://github.com/Neverknowwhattoput/My-Brownlow-Predictor/blob/main/plots/top_5_predictions_2023.png?raw=true)
