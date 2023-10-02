@@ -48,10 +48,27 @@ Similarly captains data sourced from wikipedia, regex needed to be used to extra
 
 Column names for data sourced from the AFL website were very messy so they all had to be renamed, the player statistics dataset did not include the team scores so that also needed to be sourced, cleaned and merged.
 
+## Code Structure
 
+All of the cleaning/preprocessing, model building and simulation is done within the notebooks found in the notebooks folder, seperated by function and numbered in the order they need to be run. Where a file begins with 1, this is past seasons data, and beginning with a 2 is current season (2023) data.
 
+There is a single main.py script that runs all of the preprocessing and build model notebooks at once, so there is no need to open and close each file.
 
-## Table of Predictions when testing the model on the 2022 season
+Once the script has been run, the simulation can be run, given how many simulations are to be run, I have included a progress bar from TQDM so that one can track it's progress.
+
+The notebooks in the prediction folder can be run seperately to get the model's prediction for the 2023 season.
+
+## Results and Evaluation
+
+As can be seen below, when testing the model Clayton Oliver was the predicted winner, with the actual winner Patrick Cripps coming 5th (although just about equal 4th with Christian Petracca). 
+
+Given the Monte Carlo Simulation method, it is expected that predicted votes will generally under estimate compared to the actual votes. Since players towards the bottom of the list that in reality will poll 0 votes, mind end up with 0.05 votes when averaged out. The sum of these votes decrease the total votes predicted at the top of the list.
+
+Generally the model does a good job of assigning votes to players deserving of them, since it correctly predicts 8 of the actual top 10 players, albeit in the wrong order.
+
+Most noteworthy for concern is how drastically the model underpredicts Cripps and Brayshaw while over predicting Laird and Walsh. I have listed reasons for why I think this might be in the future improvements section at the bottom.
+
+### Model Testing Results for 2022
 
 <table border="1" class="dataframe">
   <thead>
@@ -137,6 +154,11 @@ Column names for data sourced from the AFL website were very messy so they all h
   </tbody>
 </table>
 
-## Top 5 predictions for 2023
+### Top 5 predictions for 2023
 
 ![Sample Image](https://github.com/Neverknowwhattoput/My-Brownlow-Predictor/blob/main/plots/top_5_predictions_2023.png?raw=true)
+
+
+## Future Improvements
+
+## References
