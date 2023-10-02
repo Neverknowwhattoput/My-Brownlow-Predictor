@@ -9,8 +9,6 @@ This is done to ensure the sum of votes within a match is 6, just like the actua
 # Table of Contents
 
 1. [Installation](#installation)
-  1. [Code](#code)
-  2. [Packages](#packages)
 2. [Code Structure](#code-structure)
 3. [Results and Evaluation](#results-and-evaluation)
 4. [Future Improvements](#future-improvements)
@@ -183,9 +181,9 @@ Not so surprising is Nick Daicos polling extremely well, if it were not for his 
 
 Using in-game statistics has established a good foundation for predicting brownlow votes. However as I mentioned Cripps and Brayshaw's polling ability has been underestimated by the model, and I believe this is because the stats simply cannot tell the whole story, not to mention the fact that umpires do not get to access the stat sheet when casting their votes.
 
-I'd like to incorporate various man of the match votes, sourced from the AFL match reports and various newspaper organisations or possibly the lou richards medal voting from Channel Nine's The Footy Show, I believe this would help to contexualise the stats achieved by player's.
+I'd like to incorporate various man of the match votes, sourced from the AFL match reports and various newspaper organisations and other media. I believe this would help to contexualise the stats achieved by player's.
 
-For example player like Rory Laird and Sam Walsh were over predicted by the model, and this is probably because they do rack up a lot of disposals (1st and 3rd for average disposals in 2022), Laird was number 1 for average AFL fantasy score in 2022 as well. However they may not impact the game as much as other players on the field.
+For example player like Rory Laird and Sam Walsh were over predicted by the model, and this is probably because while they do rack up a lot of disposals (1st and 3rd for average disposals in 2022), Laird was number 1 for average AFL fantasy score in 2022 as well, they may not impact the game as much as other players on the field.
 
 Players like Cripps or Bontempelli can have a much larger influence on the game whilst recording fewer statistics. It's why I decided to incorporate the is_captain feature as this may have helped predict how an umpire sees their influence on a match.
 
