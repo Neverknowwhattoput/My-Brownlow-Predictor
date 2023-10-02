@@ -9,7 +9,11 @@ This is done to ensure the sum of votes within a match is 6, just like the actua
 # Table of Contents
 
 1. [Installation](#installation)
+  1. [Code](#code)
 2. [Code Structure](#code-structure)
+3. [Results and Evaluation](#results-and-evaluation)
+4. [Future Improvements](#future-improvements)
+5. [References](#references)
 
 ## Installation
 ### Code
