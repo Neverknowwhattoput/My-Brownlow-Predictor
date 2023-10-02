@@ -1,5 +1,5 @@
 """
-this script runs all of the notebooks in the preprocessing folder so that they do not need to be opened individually
+this script runs all of the notebooks in the preprocessing and build model folders so that they do not need to be opened individually
 """
 
 import os
@@ -46,3 +46,5 @@ if __name__ == "__main__":
     folder_path = "notebooks/1 - preprocessing"  
     run_all_notebooks_in_folder(folder_path)
 
+    folder_path = "notebooks/2 - build_model"  
+    run_all_notebooks_in_folder(folder_path)
