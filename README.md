@@ -9,7 +9,7 @@ This project uses R to source AFL data using the Fryzigg package.
 Python is used to source any remaining data and conduct cleaning, visualisation and machine learning.
 
 ### Packages
-* **General Purpose:** os, tqdm, pyarrow
+* **General Purpose:** `os`, tqdm, pyarrow (for parquet support)
 * **Data Manipulation:** pandas, numpy
 * **Data Visualisation:** seaborn, matplotlib
 * **Machine Learning:** statsmodels, scikit-learn
@@ -160,11 +160,26 @@ I have also included the model's predictions for the 2023 season. Historically b
 
 Most surprising is the absence of Marcus Bontempelli, who I fear suffers the same fate as Cripps when it comes to predicting votes based on in game statistics.
 
-No surprises is Nick Daicos polling extremely well, if it were not for his late season injury, you could just about guarantee his victory.
+Not so surprising is Nick Daicos polling extremely well, if it were not for his late season injury, you could just about guarantee his victory.
 
 ![Sample Image](https://github.com/Neverknowwhattoput/My-Brownlow-Predictor/blob/main/plots/top_5_predictions_2023.png?raw=true)
 
 
 ## Future Improvements
 
+Using in-game statistics has established a good foundation for predicting brownlow votes. However as I mentioned Cripps and Brayshaw's polling ability has been underestimated by the model, and I believe this is because the stats simply cannot tell the whole story, not to mention the fact that umpires do not get to access the stat sheet when casting their votes.
+
+I'd like to incorporate various man of the match votes, sourced from the AFL match reports and various newspaper organisations or possibly the lou richards medal voting from Channel Nine's The Footy Show, I believe this would help to contexualise the stats achieved by player's.
+
+For example player like Rory Laird and Sam Walsh were over predicted by the model, and this is probably because they do rack up a lot of disposals (1st and 3rd for average disposals in 2022), Laird was number 1 for average AFL fantasy score in 2022 as well. However they may not impact the game as much as other players on the field.
+
+Players like Cripps or Bontempelli can have a much larger influence on the game whilst recording fewer statistics. It's why I decided to incorporate the is_captain feature as this may have helped predict how an umpire sees their influence on a match.
+
+So while the stats may not tell the story of Cripps or Bont's dominance in a match, those watching will surely notice and it will be reflected in list of players recieving votes for man of the match.
+
+In order to access this data however would mean going back to the 2013 season and flipping through the paper every week in order to collate a spreadsheet of every vote for every game.
+
 ## References
+
+Ash Walls' website was a huge guide whilst I was completing this project, and largely the inspiration for the whole thing.
+https://chewthestat.com/monte-charlo-using-data-to-predict-the-brownlow-medal/
