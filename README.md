@@ -9,7 +9,7 @@ This project uses R to source AFL data using the Fryzigg package.
 Python is used to source any remaining data and conduct cleaning, visualisation and machine learning.
 
 ### Packages
-* **General Purpose:** os, tqdm
+* **General Purpose:** os, tqdm, pyarrow
 * **Data Manipulation:** pandas, numpy
 * **Data Visualisation:** seaborn, matplotlib
 * **Machine Learning:** statsmodels, scikit-learn
@@ -22,6 +22,34 @@ Python is used to source any remaining data and conduct cleaning, visualisation 
 * afltables: https://afltables.com/afl/afl_index.html
 2. Wikipedia: https://en.wikipedia.org/wiki/2012_AFL_season
 3. Wheeloratings: https://www.wheeloratings.com/afl_brownlow.html
+
+### Data Acquisition
+The data sourced from wheeloratings is included in this repository as the download could not be automated
+
+Data from Wikipedia is obtained within the notebooks using pandas as it is simply reading a table on the page
+
+The remaining data is sourced via R, one can simply run the R file found in the folder named R
+
+### Data Preprocessing
+Data sourced using the fryzigg package was already fairly clean, just needed to drop columns that were irrelevant, many of which also contained N/A values.
+There were many supercoach scores that were n/a, so they were sourced from footywire.
+
+Some matches' data was not recorded properly so that was dropped. Where possible the AFL website was accessed and the data was changed manually.
+
+Footytables was used to source brownlow votes for 2022 as they had not been added to the fryzigg source.
+
+Where data was sourced from different websites, there was no common player_id and some names were represented differently, hence I had to get creative to be able to merge them properly. (e.g. Tom Stewart vs, Thomas Stewart)
+
+I took the first letter of the first name paired with the second name, transformed the capitals to lowercase, and removed puncuation such as apostrophes. This paired with the player's team (since there were 2 Tom Lynch's for example) was a successful unique key for most players, and 1 or 2 were edited by hand (names like Ian Hill vs. Bobby Hill).
+
+For the coaches votes names were represented as (name (team)) hence regex needed to be used to seperate the player name and team, then it could be merged with the main dataframe.
+
+Similarly captains data sourced from wikipedia, regex needed to be used to extract players names, where some had reference attached to them (player[1])
+
+Column names for data sourced from the AFL website were very messy so they all had to be renamed, the player statistics dataset did not include the team scores so that also needed to be sourced, cleaned and merged.
+
+
+
 
 ## Table of Predictions when testing the model on the 2022 season
 
