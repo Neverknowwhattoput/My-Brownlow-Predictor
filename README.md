@@ -156,6 +156,12 @@ Most noteworthy for concern is how drastically the model underpredicts Cripps an
 
 ### Top 5 predictions for 2023
 
+I have also included the model's predictions for the 2023 season. Historically both Clayton Oliver and Christian Petracca have polled well consistenly, coming top 10 in each of the last 3 counts. However given Oliver's extensive injury this season, there might be a chance that Petracca can poll those few extra votes that get him over the line.
+
+Most surprising is the absence of Marcus Bontempelli, who I fear suffers the same fate as Cripps when it comes to predicting votes based on in game statistics.
+
+No surprises is Nick Daicos polling extremely well, if it were not for his late season injury, you could just about guarantee his victory.
+
 ![Sample Image](https://github.com/Neverknowwhattoput/My-Brownlow-Predictor/blob/main/plots/top_5_predictions_2023.png?raw=true)
 
 
