@@ -1,9 +1,17 @@
 # My Brownlow Predictor
  A personal project to apply what I have learnt at university to a particular task of interest. 
- The project aims to predict the Brownlow Medalist for the AFL 2023 season.
+ The project aims to predict the Brownlow Medallist for the AFL 2023 season.
 
 ## Installation
-### Codes
+### Code
+This project uses R to source AFL data using the Fryzigg package
+Python is used to source any remaining data and conduct cleaning. visualisation and machine learning
+
+### Packages
+**General Purpose:** os, tqdm
+**Data Manipulation:** pandas, numpy
+**Data Visualisation:** seaborn, matplotlib
+**Machine Learning:** statsmodels, scikit
 
 ## Table of Predictions when testing the model on the 2022 season
 
