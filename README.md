@@ -2,17 +2,21 @@
  A personal project to apply what I have learnt at university to a particular task of interest. 
  The project aims to predict the Brownlow Medallist for the AFL 2023 season.
 
+I use in-game statistics as well as coaches votes and player characteristics to build a machine learning model to assign probabilities of polling 3-2-1 votes for a match. Then for each match the probabilities are normalised so that they add to 1 and can thus be used in a monte carlo simulation to assign votes.
+
+This is done to ensure the sum of votes within a match is 6, just like the actual count.
+
 ## Installation
 ### Code
-This project uses R to source AFL data using the Fryzigg package.
+This project uses R (4.3.0) to source AFL data using the Fryzigg package.
 
-Python is used to source any remaining data and conduct cleaning, visualisation and machine learning.
+Python (3.11.4) is used to source any remaining data and conduct cleaning, visualisation, machine learning and simulation.
 
 ### Packages
-* **General Purpose:** `os`, tqdm, pyarrow (for parquet support)
-* **Data Manipulation:** pandas, numpy
-* **Data Visualisation:** seaborn, matplotlib
-* **Machine Learning:** statsmodels, scikit-learn
+* **General Purpose:** `os`, `tqdm`, `pyarrow` (for parquet support)
+* **Data Manipulation:** `pandas`, `numpy`
+* **Data Visualisation:** `seaborn`, `matplotlib`
+* **Machine Learning:** `statsmodels`, `scikit-learn`
 
 ## Data
 ### Source Data
