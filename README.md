@@ -4,14 +4,24 @@
 
 ## Installation
 ### Code
-This project uses R to source AFL data using the Fryzigg package
-Python is used to source any remaining data and conduct cleaning. visualisation and machine learning
+This project uses R to source AFL data using the Fryzigg package.
+
+Python is used to source any remaining data and conduct cleaning, visualisation and machine learning.
 
 ### Packages
 * **General Purpose:** os, tqdm
 * **Data Manipulation:** pandas, numpy
 * **Data Visualisation:** seaborn, matplotlib
-* **Machine Learning:** statsmodels, scikit
+* **Machine Learning:** statsmodels, scikit-learn
+
+## Data
+### Source Data
+1. fitzRoy API: https://jimmyday12.github.io/fitzRoy/index.html
+* AFL website: https://www.afl.com.au/
+* footywire: https://www.footywire.com/
+* afltables: https://afltables.com/afl/afl_index.html
+2. Wikipedia: https://en.wikipedia.org/wiki/2012_AFL_season
+3. Wheeloratings: https://www.wheeloratings.com/afl_brownlow.html
 
 ## Table of Predictions when testing the model on the 2022 season
 
