@@ -6,6 +6,11 @@ I use in-game statistics as well as coaches votes and player characteristics to 
 
 This is done to ensure the sum of votes within a match is 6, just like the actual count.
 
+# Table of Contents
+
+1. [Installation](#installation)
+2. [Code Structure](#code-structure)
+
 ## Installation
 ### Code
 This project uses R (4.3.0) to source AFL data using the Fryzigg package.
